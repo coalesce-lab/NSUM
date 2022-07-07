@@ -1,3 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 importFrom(MASS, fitdistr)
 importFrom(MCMCpack, rinvgamma)
+importFrom("stats", "rbeta", "rbinom", "rlnorm", "rnorm", "runif")
