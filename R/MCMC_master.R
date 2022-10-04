@@ -13,15 +13,13 @@ nsum.mcmc <- function(dat, known, N, indices.k=(length(known)+1):(dim(dat)[2]),
 {
   cl <- match.call()
   model <- match.arg(model, c("degree", "barrier", "transmission", "combined"))
-  structure(
-    switch(
-      model,
-      degree = .mcmc.rd(dat, known, N, indices.k, iterations, burnin, size, ...),
-      barrier = .mcmc.bar(dat, known, N, indices.k, iterations, burnin, size, ...),
-      transmission = .mcmc.trans(dat, known, N, indices.k, iterations, burnin, size, ...),
-      combined = .mcmc.comb(dat, known, N, indices.k, iterations, burnin, size, ...)
-    ),
-    call = cl,
-    class = "NSUM"
+  rval <-     switch(
+    model,
+    degree = .mcmc.rd(dat, known, N, indices.k, iterations, burnin, size, ...),
+    barrier = .mcmc.bar(dat, known, N, indices.k, iterations, burnin, size, ...),
+    transmission = .mcmc.trans(dat, known, N, indices.k, iterations, burnin, size, ...),
+    combined = .mcmc.comb(dat, known, N, indices.k, iterations, burnin, size, ...)
   )
+  rval$call <- cl
+  structure(rval, class = "NSUM")
 }
