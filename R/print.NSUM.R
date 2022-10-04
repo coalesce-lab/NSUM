@@ -1,3 +1,8 @@
+#' Other functions
+#'
+#' @param x object returned by `nsum.mcmc()`
+#'
+#' @export
 print.NSUM <- function(x, ...) {
   cat("\nNSUM model\n")
   if(!is.null(x$call)) {
