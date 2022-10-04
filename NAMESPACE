@@ -1,4 +1,6 @@
 exportPattern("^[[:alpha:]]+")
+S3method(summary, NSUM)
+S3method(print, summary.NSUM)
 importFrom(MASS, fitdistr)
 importFrom(MCMCpack, rinvgamma)
 importFrom("stats", "rbeta", "rbinom", "rlnorm", "rnorm", "runif")

@@ -9,3 +9,5 @@ Description: A Bayesian framework for population group size estimation using the
 License: GPL-2 | GPL-3
 NeedsCompilation: no
 Repository: CRAN
+RoxygenNote: 7.2.1
+Encoding: UTF-8
