@@ -17,8 +17,8 @@ summary.NSUM <- function(object, ...) {
   has <- names(object) %in% paste0(nams, ".values")
   rval <- object
   rval[has] <- lapply(object[has], apply, 1, summary.default)
-  rval$mu <- summary.default(object$mu.values)
-  rval$sigma <- summary.default(object$sigma.values)
+  rval$mu.values <- summary.default(object$mu.values)
+  rval$sigma.values <- summary.default(object$sigma.values)
   structure(rval, class = "summary.NSUM")
 }
 
