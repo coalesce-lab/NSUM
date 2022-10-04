@@ -32,5 +32,7 @@ print.summary.NSUM <- function(x, ...) {
     cat("\nCall:\n", paste(deparse(x$call), sep = "\n", collapse = "\n"),
         "\n\n", sep = "")
   }
+  cat("\nDegrees:\n")
+  print(summary(x$d.values["Median",]))
   invisible(NULL)
 }
