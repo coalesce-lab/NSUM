@@ -8,6 +8,8 @@
 }
 \arguments{
 \item{x}{object returned by `nsum.mcmc()`}
+
+\item{...}{other arguments to/from other methods}
 }
 \description{
 Other functions

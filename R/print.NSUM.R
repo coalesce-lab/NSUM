@@ -1,6 +1,7 @@
 #' Other functions
 #'
 #' @param x object returned by `nsum.mcmc()`
+#' @param ... other arguments to/from other methods
 #'
 #' @export
 print.NSUM <- function(x, ...) {
